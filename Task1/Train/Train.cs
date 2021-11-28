@@ -8,28 +8,28 @@ namespace Train
 {
     class Train
     {
-        private List<TrainCar> train = new List<TrainCar>();
+        private List<TrainCar> trainCars = new List<TrainCar>();
 
-        public void AddTrainCar(int i, int j, string t)
+        public void AddTrainCar(int passangerCapacity, int luggageCapacity, string trainCarType)
         {
-            train.Add(new TrainCar() { passengerСapacity = i, luggageCapacity = j, trainCarType = t });
+            trainCars.Add(new TrainCar() { PassengerСapacity = passangerCapacity, LuggageCapacity = luggageCapacity, TrainCarType = trainCarType });
         }
 
-        public void RemoveTrainCar(int i)
+        public void RemoveTrainCar(int index)
         {
-            train.RemoveAt(i);
+            trainCars.RemoveAt(index);
         }
 
         public string ViewTrain()
         {
-            if (train.Count() != 0)
+            if (trainCars.Count() != 0)
             {
                 string answer = "";
-                foreach (TrainCar item in train)
+                foreach (TrainCar item in trainCars)
                 {
-                    answer += "Class: " + item.trainCarType+ " | ";
-                    answer += "Passanger capacity: " + item.passengerСapacity + " | ";
-                    answer += "Luggage capacity: " + item.luggageCapacity + " |\n";
+                    answer += "Class: " + item.TrainCarType+ " | ";
+                    answer += "Passanger capacity: " + item.PassengerСapacity + " | ";
+                    answer += "Luggage capacity: " + item.LuggageCapacity + " |\n";
                 }
                 return answer;
             }
@@ -41,79 +41,54 @@ namespace Train
 
         public void SortByClass()
         {
-            var orderByClass = from c in train
-                               orderby c.trainCarType
-                               select c;
-            List<TrainCar> newTrain = new List<TrainCar>();
-            foreach (var car in orderByClass)
-            {
-                newTrain.Add(car);
-            }
-            train.Clear();
-            foreach (TrainCar car in newTrain)
-            {
-                train.Add(car);
-            }
-            newTrain.Clear();
+            var orderByClass = trainCars.OrderBy(c => c.TrainCarType).ToList();
+            trainCars.Clear();
+            trainCars.AddRange(orderByClass);
         }
 
         public void SortByClassDescending()
         {
-            var orderByClassDescending = from c in train
-                               orderby c.trainCarType descending
-                               select c;
-            List<TrainCar> newTrain = new List<TrainCar>();
-            foreach (var car in orderByClassDescending)
-            {
-                newTrain.Add(car);
-            }
-            train.Clear();
-            foreach (TrainCar car in newTrain)
-            {
-                train.Add(car);
-            }
-            newTrain.Clear();
+            var orderByClassDescending = trainCars.OrderByDescending(c => c.TrainCarType).ToList();
+            trainCars.Clear();
+            trainCars.AddRange(orderByClassDescending);
         }
 
         public string SearchOperation(int lowLimit, int upLimit)
         {
-            var searchLowwerUpper = from item in train
-                                    where item.passengerСapacity >= lowLimit && item.passengerСapacity <= upLimit
+            var searchLowwerUpper = from item in trainCars
+                                    where item.PassengerСapacity >= lowLimit && item.PassengerСapacity <= upLimit
                                     select item;
 
             string answer = "";
             foreach (var item in searchLowwerUpper)
             {
-                answer += "Class: " + item.trainCarType + " | ";
-                answer += "Passanger capacity: " + item.passengerСapacity + " | ";
-                answer += "Luggage capacity: " + item.luggageCapacity + " |\n";
-                //Console.WriteLine("Class: {0} | Passenger capacity: {1} | Luggage capacity: {2}", item.trainCarType, item.passengerСapacity, item.luggageCapacity);
+                answer = answer + $"Class: {item.TrainCarType} | Passanger capacity: {item.PassengerСapacity} | Luggage capacity: {item.LuggageCapacity}\n";
             }
             return answer;
         }
 
         public int TotalPassengerCapacity()
         {
-            int TotalCapacity = 0;
+            int totalCapacity = 0;
 
-            foreach (TrainCar car in train)
+            foreach (TrainCar car in trainCars)
             {
-                TotalCapacity = TotalCapacity + car.passengerСapacity;
+                totalCapacity = totalCapacity + car.PassengerСapacity;
             }
 
-            return TotalCapacity;
+            return totalCapacity;
         }
 
         public int TotalLuggageCapacity()
         {
-            int TotalCapacity = 0;
+            int totalCapacity = 0;
 
-            foreach (TrainCar car in train)
+            foreach (TrainCar car in trainCars)
             {
-                TotalCapacity = TotalCapacity + car.luggageCapacity;
+                totalCapacity = totalCapacity + car.LuggageCapacity;
             }
 
-            return TotalCapacity;
+            return totalCapacity;
         }
     }
 }

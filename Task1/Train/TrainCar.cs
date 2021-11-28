@@ -8,9 +8,9 @@ namespace Train
 {
     class TrainCar
     {
-        public int passengerСapacity { get; set; }
-        public int luggageCapacity { get; set; }
+        public int PassengerСapacity { get; set; }
+        public int LuggageCapacity { get; set; }
 
-        public string trainCarType { get; set; }
+        public string TrainCarType { get; set; }
     }
 }
