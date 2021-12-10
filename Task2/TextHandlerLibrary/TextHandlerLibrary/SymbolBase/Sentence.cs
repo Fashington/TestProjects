@@ -69,10 +69,18 @@ namespace TextHandlerLibrary.SymbolBase
 
                         if (punctuationBuffer.SymbolUnit.Equals(' ') == true)
                         {
-                            if ((SentenceUnit[i - 1].Equals(' ') == false) || (SentenceUnit[i - 1].Equals('\t') == false) || (SentenceUnit[i - 1].Equals('\v') == false))
+                            if (SentenceUnit[i - 1].Equals(' ') == false)
                             {
-                                punctuationBuffer.SetIndex(wordList.Count - 1);
-                                punctuationList.Add(new Punctuation(punctuationBuffer.SymbolUnit, punctuationBuffer.Index));
+                                if (SentenceUnit[i - 1].Equals('\t') == false)
+                                {
+                                    if (SentenceUnit[i - 1].Equals('\v') == false)
+                                    {
+                                        punctuationBuffer.SetIndex(wordList.Count - 1);
+                                        punctuationList.Add(new Punctuation(punctuationBuffer.SymbolUnit, punctuationBuffer.Index));
+                                    }
+                                }
+                                //punctuationBuffer.SetIndex(wordList.Count - 1);
+                                //punctuationList.Add(new Punctuation(punctuationBuffer.SymbolUnit, punctuationBuffer.Index));
                             }
                         }
                         else
