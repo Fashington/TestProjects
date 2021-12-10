@@ -1,0 +1,5 @@
+This file contains some sentences to write or read. TeddyBear TeddyBear of TeddyBear TeddyBear document TeddyBear be TeddyBear TeddyBear TeddyBear parser and TeddyBear written to another TeddyBear TeddyBear.
+So some randome words would be stored there.
+For example some set of letters will be considered as words: asdfasfd, asdfasfd, asdaf, asdfaf.
+And maybe some questions?
+Or some emotional sentences! Even sets of words or letter with brackets or parentheses: {another}, [word], (qazxsw), "qwer", 'asdfasf'.

@@ -1,0 +1,13 @@
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\bin\Debug\net5.0\TextHandlerLibrary.deps.json
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\bin\Debug\net5.0\TextHandlerLibrary.dll
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\bin\Debug\net5.0\ref\TextHandlerLibrary.dll
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\bin\Debug\net5.0\TextHandlerLibrary.pdb
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.csproj.AssemblyReference.cache
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.AssemblyInfoInputs.cache
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.AssemblyInfo.cs
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.csproj.CoreCompileInputs.cache
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.dll
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\ref\TextHandlerLibrary.dll
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\obj\Debug\net5.0\TextHandlerLibrary.pdb
+E:\Study\TextHandlerLibrary\TextHandlerLibrary\bin\Debug\net5.0\TextHandlerLibrary.dll.config
